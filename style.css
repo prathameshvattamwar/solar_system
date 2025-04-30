@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+  font-family: sans-serif;
+  display: flex; /* Use flexbox for layout */
+}
+
+#scene-container {
+  flex-grow: 1; /* Canvas takes remaining space */
+  height: 100vh;
+  display: block;
+}
+
+canvas {
+  display: block;
+}
+
+#planet-list {
+  width: 180px; /* Width of the sidebar */
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: #eee;
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-y: auto; /* Add scroll if list gets too long */
+  flex-shrink: 0; /* Prevent sidebar from shrinking */
+  z-index: 10; /* Ensure it's above the canvas */
+}
+
+#planet-list h2 {
+  margin-top: 0;
+  text-align: center;
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+
+#planet-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+#planet-list li {
+  margin-bottom: 8px;
+}
+
+#planet-list a {
+  text-decoration: none;
+  color: #ccc;
+  display: flex; /* Use flexbox for icon alignment */
+  align-items: center; /* Vertically center icon and text */
+  padding: 8px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 0.95em;
+}
+
+#planet-list a:hover,
+#planet-list a.active {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Planet Icon Styles */
+.icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+  border: 1px solid #555; /* Subtle border */
+}
+
+/* Assign background colors matching the 3D planets */
+.icon.sun {
+  background-color: #ffcc33;
+  border-color: #ffa500;
+}
+.icon.mercury {
+  background-color: #aaaaaa;
+}
+.icon.venus {
+  background-color: #ffe082;
+}
+.icon.earth {
+  background-color: #6699ff;
+}
+.icon.mars {
+  background-color: #ff7f50;
+}
+.icon.jupiter {
+  background-color: #d2b48c;
+}
+.icon.saturn {
+  background-color: #f5f5dc;
+}
+.icon.uranus {
+  background-color: #afeeee;
+}
+.icon.neptune {
+  background-color: #3a5fcd;
+}
+.icon.overview {
+  background-color: #777;
+} /* Generic icon for overview */

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Solar System - Enhanced</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container for the 3D scene -->
+    <div id="scene-container"></div>
+
+    <!-- Right Side Navigation List -->
+    <nav id="planet-list">
+        <h2>Planets</h2>
+        <ul>
+            <!-- Items will be populated by script, or you can list them statically -->
+            <li><a href="#" data-target="sun"><span class="icon sun"></span>Sun</a></li>
+            <li><a href="#" data-target="mercury"><span class="icon mercury"></span>Mercury</a></li>
+            <li><a href="#" data-target="venus"><span class="icon venus"></span>Venus</a></li>
+            <li><a href="#" data-target="earth"><span class="icon earth"></span>Earth</a></li>
+            <li><a href="#" data-target="mars"><span class="icon mars"></span>Mars</a></li>
+            <li><a href="#" data-target="jupiter"><span class="icon jupiter"></span>Jupiter</a></li>
+            <li><a href="#" data-target="saturn"><span class="icon saturn"></span>Saturn</a></li>
+            <li><a href="#" data-target="uranus"><span class="icon uranus"></span>Uranus</a></li>
+            <li><a href="#" data-target="neptune"><span class="icon neptune"></span>Neptune</a></li>
+            <li><a href="#" data-target="overview"><span class="icon overview"></span>Overview</a></li>
+        </ul>
+    </nav>
+
+    <!-- Import Three.js & TWEEN -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/",
+                "@tweenjs/tween.js": "https://unpkg.com/@tweenjs/tween.js@21.0.0/dist/tween.esm.js"
+            }
+        }
+    </script>
+
+    <!-- Your JavaScript code -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
